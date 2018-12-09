@@ -1,0 +1,29 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: lightgray;
+    margin: 5%;
+    h1 {
+        text-align: center;
+        margin-bottom: 2%;
+        color: #117a8b;
+    }
+    .title_list {
+        color: #117a8b;
+        background-color: #9fcdff;
+    }
+    a {
+        color: #343a40;
+        &:hover {
+            color : white;
+            text-decoration: none;
+        }
+    }
+    .button_style {
+        margin : 1%;
+    }
+    label {
+        padding-right: 2%;
+
+    }
+}

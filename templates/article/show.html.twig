@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+    <h1>Article</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ article.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ article.title }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ article.content }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td><a href="{{ path('category_show', {'id': category.id}) }}">{{ article.category.name }}</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-outline-info button_style"><a href="{{ path('article_index') }}">back to list</a></button>
+
+    <button type="button" class="btn btn-outline-info button_style"><a href="{{ path('article_edit', {'id': article.id}) }}">edit</a></button>
+
+
+    {{ include('article/_delete_form.html.twig') }}
+{% endblock %}
